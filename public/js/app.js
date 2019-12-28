@@ -13,8 +13,8 @@ weatherForm.addEventListener('submit', (e)=>{
     e.preventDefault();
 
     const location = address.value;
-    const addressURL = 'http://localhost:3000/weather?address='+location;
-    messageOne.textContent='loading';
+    const addressURL = '/weather?address='+location;
+    messageOne.textContent='loading...';
     messageTwo.textContent='';
     fetch(addressURL).then((response)=>{
     response.json().then((data)=>{
@@ -23,7 +23,7 @@ weatherForm.addEventListener('submit', (e)=>{
         }
         else{
         console.log(data);
-        messageOne.textContent=data.temperature+' degree Celsius';
+        messageOne.textContent=data.temperature+'° Celsius';
         messageTwo.textContent=data.location;
 
         }

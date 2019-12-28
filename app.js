@@ -3,6 +3,7 @@ const path = require('path');
 const hbs = require('hbs');
 let utils = require('./utils/utils.js');
 
+const port = process.env.PORT || 3000;
 const app =express();
 const publicDirectoryPath = path.join(__dirname, './public')
 const partialsPath = path.join(__dirname,'./partials');
@@ -61,6 +62,6 @@ app.get('/weather',(req,res)=>{
     }
 });
 
-app.listen(3000, ()=>{
-    console.log("Hello dawgs! Listening to port 3000!");
+app.listen(port, ()=>{
+    console.log("Hello dawgs! Listening to port "+ port);
 })
