@@ -1,7 +1,15 @@
 <html>
     <head>
+        <title>Weather</title>
+        <link rel="icon" href="/images/icon.png">
+        <link rel="stylesheet" href="/css/styles.css">
+        
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
         <body>
+            <div class="mainbitch">
             {{>header}}
+            <p>Use this website to get weather, Dawgs!</p>
             <br>
             <form>
                 <input placeholder="Location" >
@@ -10,6 +18,11 @@
             <p id="messageone"></p>
             <p id="messagetwo"></p>
             <script src="/js/app.js"> </script>
+            </div>
+            
+
+
+            {{>footer}}
         </body>
     </head>
 </html>
